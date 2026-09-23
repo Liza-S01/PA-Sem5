@@ -1,0 +1,61 @@
+package com.stack;
+
+public class Stack {
+	
+
+	// push() - adds element
+	// pop() - removes top element
+	// peek() - top element show
+	// isEmpty() - check if stack empty
+	// size() - gives size of stack
+	// stack may or may not follow insertion order
+	// monotonic stack - either strictly increasing or strictly decreasing order
+
+	// stack can be implemented using array
+	
+	int[] arr;
+	int top;
+	
+	Stack(int size){
+		arr=new int[size];
+		top=-1;
+	}
+	
+	void push(int value) {
+		if(top==arr.length-1) {
+			System.out.println("Stack overflow");
+			return;
+		}
+		arr[top]=valuefr;
+	}
+	
+	int pop() {
+		if(top==-1) {
+			System.out.println("Stack underflow");
+			return -1;
+		}
+		return arr[top--];
+		
+	}
+	
+	
+	int peek() {
+		if(top==-1) {
+			return -1;
+		}
+		return arr[-1];
+	}
+	
+	void display() {
+		for(int i=top;i>0;i--) {
+			System.out.println(arr[i]," ");
+		}
+		System.out.println();
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	
+}
