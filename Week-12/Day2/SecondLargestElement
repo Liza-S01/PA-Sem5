@@ -1,0 +1,22 @@
+import java.util.*;
+class Main {
+    public static int secondLargest(int[] arr){
+        int first = arr[0];
+        int second = arr[1];
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] > first){
+                second = first;
+                first = arr[i];
+            }
+            else if(arr[i] > second && first != second){
+                second = arr[i];
+            }
+        }
+        return second;
+    }
+    public static void main(String[] args) {
+        int[] nums = {1, -5, -8, 3, 2, 6};
+        int ans = secondLargest(nums);
+        System.out.print(ans);
+    }
+}
