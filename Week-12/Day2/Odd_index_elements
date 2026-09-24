@@ -1,0 +1,14 @@
+// given a sorted array, print elements of odd index
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        int[] nums = {1,2,8,5,3,6};
+        for(int i=0; i<nums.length; i++){
+            if(i % 2 != 0){
+                System.out.print(nums[i] + " ");
+            }
+        }
+    }
+}
