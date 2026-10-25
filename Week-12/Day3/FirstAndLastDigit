@@ -1,0 +1,15 @@
+// given 123456, print 1 and 6
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+       int n = 123456;
+        String num = String.valueOf(n);
+        char[] arr = num.toCharArray();
+        int first = arr[0] - '0';
+        int last = arr[arr.length - 1] - '0';
+        System.out.println(first);
+        System.out.println(last);
+    }
+}
