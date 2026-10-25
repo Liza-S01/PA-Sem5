@@ -1,0 +1,22 @@
+// print smallest digit in an integer
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int n = 1023456;
+        n = Math.abs(n);
+        int min = 9;
+        if (n == 0) {
+            min = 0;
+        }
+        while (n > 0) {
+            int digit = n % 10;
+            if (digit < min) {
+                min = digit;
+            }
+            n = n / 10;
+        }
+        System.out.println(min);
+    }
+}
