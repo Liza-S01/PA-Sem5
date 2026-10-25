@@ -1,0 +1,14 @@
+// given "hello world", reverse alternate words: hello dlrow
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        String s = "hello world";
+        String[] words = s.split(" ");
+        for (int i = 1; i < words.length; i += 2) {
+            StringBuilder sb = new StringBuilder(words[i]);
+            words[i] = sb.reverse().toString();
+        }
+        System.out.println(String.join(" ", words));
+    }
+}
