@@ -1,0 +1,37 @@
+/* Binary Tree Node Structure
+class Node {
+    int data;
+    Node left, right;
+    public Node(int data) {
+        this.data = data;
+
+    }
+} */
+class Solution {
+    int maxSum = 0;
+    int maxLen = 0;
+    void solve(Node root, int length, int sum){
+        if(root == null) return;
+        length++;
+        sum += root.data;
+        if(root.left==null && root.right == null){
+            if(length > maxLen){
+                maxLen = length;
+                maxSum = sum;
+            }
+            else if(length == maxLen){
+                maxSum = Math.max(sum, maxSum);
+            }
+            return;
+        }
+        solve(root.left, length, sum);
+        solve(root.right, length, sum);
+    }
+    public int sumOfLongRootToLeafPath(Node root) {
+        // code here
+        maxLen = 0;
+        maxSum = 0;
+        solve(root, 0, 0);
+        return maxSum;
+    }
+}
