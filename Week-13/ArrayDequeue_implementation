@@ -1,0 +1,34 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        // Deque<Integer> dq = new ArrayDeque<>();
+        // dq.addFirst(10);
+        // System.out.println(dq);
+        // dq.addFirst(20);
+        // System.out.println(dq);
+        // dq.addFirst(30);
+        // System.out.println(dq);
+        // dq.removeFirst();
+        // System.out.println(dq);
+        // dq.removeLast();
+        // System.out.println(dq);
+
+        // reverse string
+        Deque<Character> dq = new ArrayDeque<>();
+        String s = "HELLO";
+        for(int i=0; i<s.length(); i++){
+            dq.addFirst(s.charAt(i));
+        }
+        StringBuilder sb = new StringBuilder();
+        while(!dq.isEmpty()){
+            sb.append(dq.removeFirst());
+        }
+        System.out.println("Original: " + s);
+        System.out.println("Reversed: " + sb);
+
+        // check if string is palindrome
+
+        // finding next = (current index+1)%n
+        
+    }
+}
