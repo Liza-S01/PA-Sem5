@@ -1,0 +1,18 @@
+// given 123456, swap 2nd and 2nd last pos -> 153426
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int n = 123456;
+        String num = String.valueOf(n);
+        char[] arr = num.toCharArray();
+        int second = 1;
+        int secondLast = arr.length - 2;
+
+        char temp = arr[second];
+        arr[second] = arr[secondLast];
+        arr[secondLast] = temp;
+        String ans = new String(arr);
+        System.out.println(Integer.parseInt(ans));
+    }
+}
