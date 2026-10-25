@@ -1,0 +1,21 @@
+// check if every digit is same in an integer
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int n = 11111111;
+        n = Math.abs(n);
+        int last = n % 10;
+        boolean same = true;
+        while (n > 0) {
+            int digit = n % 10;
+            if (digit != last) {
+                same = false;
+                break;
+            }
+            n = n / 10;
+        }
+        System.out.println(same);
+    }
+}
