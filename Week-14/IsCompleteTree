@@ -1,0 +1,42 @@
+import java.util.*;
+class Main {
+    static boolean isComplete(Node root){
+        if(root == null) return true;
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        boolean nullFound = false;
+        while(!q.isEmpty()){
+            Node curr = q.poll();
+            if(curr == null){
+                nullFound = true;
+            }
+            else{
+                if(nullFound) return false;
+                q.add(curr.left);
+                q.add(curr.right);
+            }
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        Node root = new Node(10);
+        root.left = new Node(20);
+        root.right = new Node(30);
+        root.left.left = new Node(40);
+        root.left.right = new Node(50);
+        root.right.left = new Node(60);
+        root.right.right = new Node(70);
+
+        System.out.println(isComplete(root));
+    }
+}
+
+class Node{
+    int data;
+    Node left;
+    Node right;
+    Node(int data){
+        this.data = data;
+    }
+    
+}
