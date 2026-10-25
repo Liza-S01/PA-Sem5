@@ -1,0 +1,17 @@
+// given 123456, print sum at even pos -> 2+4+6=12
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+       int n = 123456;
+        String num = String.valueOf(n);
+        int sum = 0;
+        for (int i = 0; i < num.length(); i++) {
+            if ((i + 1) % 2 == 0) {
+                sum += num.charAt(i) - '0';
+            }
+        }
+        System.out.println(sum);
+    }
+}
