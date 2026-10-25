@@ -1,0 +1,25 @@
+// count odd and even digits
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int n = 123456;
+        n = Math.abs(n);
+        int odd = 0;
+        int even = 0;
+        if (n == 0) {
+            even = 1;
+        }
+        while (n > 0) {
+            int rem = n % 10;
+            if (rem % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+            n = n / 10;
+        }
+        System.out.println("Odd: " + odd);
+        System.out.println("Even: " + even);
+    }
+}
